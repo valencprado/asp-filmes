@@ -6,36 +6,43 @@ create database BDFilmesNoite;
 use BDFilmesNoite;
 
 # criando as tabelas
-create table tbGenero(
-CodGen int primary key auto_increment,
-Gen varchar(20)
+create table tb_genero(
+cod_gen int primary key auto_increment,
+gen varchar(20)
 );
 
-create table tbDiretor(
-CodDir int primary key auto_increment,
-Diretor varchar(100)
+create table tb_diretor(
+cod_dir int primary key auto_increment,
+dir varchar(100)
 );
 
-create table tbFilmes (
-CodFilme int primary key auto_increment,
-Filme varchar(50),
-CodDir int,
-CodGen int,
-foreign key (CodDir) references tbDiretor(CodDir),
-foreign key (CodGen) references tbGenero(CodGen)
+create table tb_filmes (
+cod_filme int primary key auto_increment,
+filme varchar(50),
+cod_dir int,
+cod_gen int,
+foreign key (cod_dir) references tb_diretor(cod_dir),
+foreign key (cod_gen) references tb_genero(cod_gen)
 );
 
 
 # inserindo gêneros
-insert into tbGenero (CodGen, Gen) values (default, 'Terror');
-insert into tbGenero (CodGen, Gen) values (default, 'Comédia');
-insert into tbGenero (CodGen, Gen) values (default, 'Romance');
-insert into tbGenero (CodGen, Gen) values (default, 'Infantil');
+insert into tb_genero (cod_gen, gen) values (default, 'Terror');
+insert into tb_genero (cod_gen, gen) values (default, 'Comédia');
+insert into tb_genero (cod_gen, gen) values (default, 'Romance');
+insert into tb_genero (cod_gen, gen) values (default, 'Infantil');
 
 # inserindo diretores
-insert into tbDiretor (CodDir, Diretor) values (default, 'Diretor 1');
-insert into tbDiretor (CodDir, Diretor) values (default, 'Diretor 2');
-insert into tbDiretor (CodDir, Diretor) values (default, 'Diretor 3');
-insert into tbDiretor (CodDir, Diretor) values (default, 'Diretor 4');
-insert into tbDiretor (CodDir, Diretor) values (default, 'Diretor 5');
-insert into tbDiretor (CodDir, Diretor) values (default, 'Diretor 6');
+insert into tb_diretor (cod_dir, dir) values (default, 'Diretor 1');
+insert into tb_diretor (cod_dir, dir) values (default, 'Diretor 2');
+insert into tb_diretor (cod_dir, dir) values (default, 'Diretor 3');
+insert into tb_diretor (cod_dir, dir) values (default, 'Diretor 4');
+insert into tb_diretor (cod_dir, dir) values (default, 'Diretor 5');
+insert into tb_diretor (cod_dir, dir) values (default, 'Diretor 6');
+
+# mostrando os dados das tabelas
+
+select * from tb_diretor;
+select * from tb_genero;
+
+
