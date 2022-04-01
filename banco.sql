@@ -25,6 +25,11 @@ foreign key (cod_dir) references tb_diretor(cod_dir),
 foreign key (cod_gen) references tb_genero(cod_gen)
 );
 
+create table tb_ator(
+cod_ator int primary key auto_increment,
+nome_ator varchar(100),
+data_nasc_ator varchar(8)
+);
 
 # inserindo gêneros
 insert into tb_genero (cod_gen, gen) values (default, 'Terror');
