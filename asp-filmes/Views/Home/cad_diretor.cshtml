@@ -1,0 +1,18 @@
+﻿@model asp_filmes.Models.cl_filmes
+@{
+    ViewBag.Title = "Cadastro Diretor";
+}
+
+<h2>Cadastro - Diretor</h2>
+
+@using (Html.BeginForm("cad_diretor", "Home", FormMethod.Post, new { enctype = "multipart/formdata" }))
+{ 
+    @Html.LabelFor(m => m.dir)
+    <br />
+    <br />
+    @Html.EditorFor(m => m.dir)
+    <br />
+    <br />
+
+    <input type="submit" value="Cadastrar" />
+}

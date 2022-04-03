@@ -1,0 +1,18 @@
+﻿@model asp_filmes.Models.cl_filmes
+@{
+    ViewBag.Title = "cad_genero";
+}
+
+<h2>cadastro - Gênero</h2>
+
+@using (Html.BeginForm("cad_genero", "Home", FormMethod.Post, new { enctype = "multipart/formdata" }))
+{
+    @Html.LabelFor(m => m.gen)
+    <br />
+    <br />
+    @Html.EditorFor(m => m.gen)
+    <br />
+    <br />
+   
+    <input type="submit" value="Cadastrar" />
+}

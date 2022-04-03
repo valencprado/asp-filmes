@@ -1,0 +1,21 @@
+﻿@model asp_filmes.Models.cl_filmes
+@{
+    ViewBag.Title = "cad_filme";
+}
+
+<h2>Cadastro - Filme</h2>
+
+@using (Html.BeginForm("cad_filme", "Home", FormMethod.Post, new { enctype = "multipart/formdata" }))
+{
+    @Html.LabelFor(m => m.filme)
+    <br />
+    <br />
+    @Html.EditorFor(m => m.filme)
+    <br />
+    <br />
+    @Html.DropDownList("generos", "Escolha o gênero do filme:")
+    <br />
+    <br />
+    @Html.DropDownList("diretor", "Escolha o diretor do filme:")
+    <input type="submit" value="Cadastrar" />
+}
