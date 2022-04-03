@@ -81,40 +81,42 @@ namespace asp_filmes.Dados
         // consulta 1: gênero
         public DataTable consulta_genero()
         {
-            MySqlCommand cmd = new MySqlCommand("select * from tb", con.MyConectarBD());
+            MySqlCommand cmd = new MySqlCommand("select * from tb_genero", con.MyConectarBD());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable Cliente = new DataTable();
-            da.Fill(Cliente);
+            DataTable genero = new DataTable();
+            da.Fill(genero);
             con.MyDesConectarBD();
-            return Cliente;
+            return genero;
         }
+        // consulta 2: diretor
         public DataTable consulta_diretor()
         {
-            MySqlCommand cmd = new MySqlCommand("select * from tb", con.MyConectarBD());
+            MySqlCommand cmd = new MySqlCommand("select * from tb_diretor", con.MyConectarBD());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable Cliente = new DataTable();
-            da.Fill(Cliente);
+            DataTable diretor = new DataTable();
+            da.Fill(diretor);
             con.MyDesConectarBD();
-            return Cliente;
+            return diretor;
         }
+        // consulta 3: filme
         public DataTable consulta_filme()
         {
-            MySqlCommand cmd = new MySqlCommand("select * from tb", con.MyConectarBD());
+            MySqlCommand cmd = new MySqlCommand("select * from tb_filmes", con.MyConectarBD());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable Cliente = new DataTable();
-            da.Fill(Cliente);
+            DataTable filme = new DataTable();
+            da.Fill(filme);
             con.MyDesConectarBD();
-            return Cliente;
+            return filme;
         }
-
+        // consulta 4: ator
         public DataTable consulta_ator()
         {
-            MySqlCommand cmd = new MySqlCommand("select * from tb", con.MyConectarBD());
+            MySqlCommand cmd = new MySqlCommand("select * from tb_ator", con.MyConectarBD());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataTable Cliente = new DataTable();
-            da.Fill(Cliente);
+            DataTable ator = new DataTable();
+            da.Fill(ator);
             con.MyDesConectarBD();
-            return Cliente;
+            return ator;
         }
 
     }
