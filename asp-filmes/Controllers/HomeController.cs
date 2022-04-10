@@ -101,7 +101,11 @@ namespace asp_filmes.Controllers
         }
         [HttpPost] 
         public ActionResult cad_filme(cl_filmes cm)
-        { 
+        {
+            carrega_generos();
+            carrega_diretor();
+            cm.cod_gen = Request["generos"];
+            cm.cod_dir = Request["diretor"];
             acoes.inserir_filme(cm);
             return View();
         }
