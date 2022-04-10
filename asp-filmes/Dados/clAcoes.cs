@@ -48,11 +48,12 @@ namespace asp_filmes.Dados
         // inserção 3:  filme
         public void inserir_filme(cl_filmes cm)
         {
-            MySqlCommand cmd = new MySqlCommand("insert into tb_filmes (filme, cod_dir) values (@filme, @cod_dir)", con.MyConectarBD());
+            MySqlCommand cmd = new MySqlCommand("insert into tb_filmes (filme, cod_dir, cod_gen) values (@filme, @cod_dir, @cod_gen)", con.MyConectarBD());
 
 
             cmd.Parameters.Add("@filme", MySqlDbType.VarChar).Value = cm.filme;
             cmd.Parameters.Add("@cod_dir", MySqlDbType.VarChar).Value = cm.cod_dir;
+            cmd.Parameters.Add("@cod_gen", MySqlDbType.VarChar).Value = cm.cod_gen;
 
 
 
@@ -67,7 +68,8 @@ namespace asp_filmes.Dados
             MySqlCommand cmd = new MySqlCommand("insert into tb_ator (nome_ator, data_nasc_ator) values (@nome_ator, @data_nasc_ator)", con.MyConectarBD()); 
 
 
-            cmd.Parameters.Add("@dir", MySqlDbType.VarChar).Value = cm.dir;
+            cmd.Parameters.Add("@nome_ator", MySqlDbType.VarChar).Value = cm.nome_ator;
+            cmd.Parameters.Add("@data_nasc_ator", MySqlDbType.VarChar).Value = cm.data_nasc_ator;
 
 
 
