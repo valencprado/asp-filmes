@@ -28,6 +28,7 @@ namespace asp_filmes.Models
         [DisplayName("Nome do ator")]
        public string nome_ator { get; set; }
         [Required]
+        //[DataType(DataType.Date)]
         [DisplayName("Data de nascimento do ator")]
         public string data_nasc_ator { get; set; }
 
