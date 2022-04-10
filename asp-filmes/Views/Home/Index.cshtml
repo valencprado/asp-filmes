@@ -1,3 +1,51 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿<link rel="stylesheet" href="~/Content/Site.css" />
+@{
+    ViewBag.Title = "Filmes!";
 }
+
+<h1 style="text-align:center; color: #FFD100;font-weight:bold">Filmes!</h1>
+<h2> <i class="glyphicon glyphicon-arrow-up mt-2"></i>Cadastros</h2>
+<br />
+<ul class="cadastros">
+
+    <li class="item">
+      
+        @Html.ActionLink("Gênero", "cad_genero")
+    </li>
+    <li class="item">
+
+        @Html.ActionLink("Diretor", "cad_diretor")
+    </li>
+    <li class="item">
+
+        @Html.ActionLink("Filme", "cad_filme")
+    </li>
+    <li class="item">
+
+        @Html.ActionLink("Ator", "cad_ator")
+    </li>
+</ul>
+<br />
+<br />
+<h2><i class="glyphicon glyphicon-book"></i> Consultas</h2>
+<br />
+<ul class="consultas">
+    <li class="item">
+
+        @Html.ActionLink("Gênero", "consulta_genero")
+    </li>
+    <li class="item">
+
+        @Html.ActionLink("Diretor", "consulta_diretor")
+    </li>
+    <li class="item">
+
+        @Html.ActionLink("Filme", "consulta_filme")
+    </li>
+    <li class="item">
+
+        @Html.ActionLink("Ator", "consulta_ator")
+    </li>
+
+</ul>
+
