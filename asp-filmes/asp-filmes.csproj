@@ -220,6 +220,7 @@
     <Content Include="Views\Home\cad_genero.cshtml" />
     <Content Include="Views\Home\cad_diretor.cshtml" />
     <Content Include="Views\Home\cad_filme.cshtml" />
+    <Content Include="Views\Home\cad_ator.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
