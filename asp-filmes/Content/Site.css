@@ -22,3 +22,20 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.consultas li{
+    width: 100px;
+    height:100px;
+    list-style: none;
+    background-color: #e5e5e5;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+    
+}
+.consultas, .cadastros {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+h2{
+    text-align:center
+}
