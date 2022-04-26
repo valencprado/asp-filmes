@@ -51,3 +51,4 @@ select * from tb_diretor;
 select * from tb_genero;
 select * from tb_filmes;
 delete  from tb_filmes ;
+select * from tb_ator;
